@@ -1,2 +1,2 @@
-web: python __init__.py:wq
+web: python __init__.py
 
