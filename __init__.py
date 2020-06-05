@@ -1,3 +1,5 @@
+"""Simple app that greets through HTTP."""
+
 import os
 from flask import Flask, jsonify
 app = Flask(__name__)
@@ -7,6 +9,7 @@ _username = os.environ.get('MYAPP_USERNAME', 'World')
 
 @app.route('/')
 def hello():
+    """Returns Hello and a name"""
     return jsonify('Hello %s!' % _username)
 
 if __name__ == '__main__':
